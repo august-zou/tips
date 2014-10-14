@@ -14,6 +14,7 @@
   "dependencies": {
     "sequelize": "^2.0.0-rc1",
     "line-reader": "^0.2.4",
-    "pg": "^3.5.0"
+    "pg": "^3.5.0",
+    "mmseg": "^0.2.0"
   }
 }
