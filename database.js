@@ -27,11 +27,14 @@ var Word = sequelize.define('Word', {
   other: Sequelize.STRING
 });
 
-var TipWord = sequelize.define('TipWord', {
-  tip_id: Sequelize.INTEGER,
-  word_id: Sequelize.INTEGER,
-  other: Sequelize.STRING
-});
+// var TipWord = sequelize.define('TipWord', {
+//   tip_id: Sequelize.INTEGER,
+//   word_id: Sequelize.INTEGER,
+//   other: Sequelize.STRING
+// });
+
+Tip.hasMany(Word);
+Word.hasMany(Tip);
 
 sequelize
   .sync({force: true})
