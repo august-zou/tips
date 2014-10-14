@@ -1,0 +1,19 @@
+{
+  "name": "tips",
+  "version": "0.0.1",
+  "description": "health tips",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tips"
+  ],
+  "author": "august-zou",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^2.0.0-rc1",
+    "line-reader": "^0.2.4",
+    "pg": "^3.5.0"
+  }
+}
