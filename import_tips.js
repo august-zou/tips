@@ -23,6 +23,8 @@ var Tip = sequelize.define('Tip', {
   other: Sequelize.STRING
 });
 
+
+
 function read_from_file(){
   var i=0;
   lineReader.eachLine('content.csv', function(line, last) {
@@ -42,5 +44,5 @@ function read_from_file(){
       })
   });
 }
+read_from_file();
 
-read_from_file()

@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('tips', 'zx', 'admin', {
+var sequelize = new Sequelize('tips_test', 'zx', 'admin', {
       dialect: "postgres", // or 'sqlite', 'postgres', 'mariadb'
       host: "172.31.214.169",
       port:    5432, // or 5432 (for postgres)
@@ -22,8 +22,19 @@ var Tip = sequelize.define('Tip', {
   other: Sequelize.STRING
 });
 
+var Word = sequelize.define('Word', {
+  content: Sequelize.STRING,
+  other: Sequelize.STRING
+});
+
+var TipWord = sequelize.define('TipWord', {
+  tip_id: Sequelize.INTEGER,
+  word_id: Sequelize.INTEGER,
+  other: Sequelize.STRING
+});
+
 sequelize
-  .sync({ force: true })
+  .sync({force: true})
   .complete(function(err) {
      if (!!err) {
        console.log('An error occurred while creating the table:', err)
